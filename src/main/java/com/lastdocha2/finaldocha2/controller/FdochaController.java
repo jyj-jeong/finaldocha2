@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class FdochaController {
     @RequestMapping("/")
     public  String login(Model model){
-
+        System.out.println("zzzzz");
         return "login";
     }
     @RequestMapping("/home")
