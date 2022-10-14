@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lastdocha2.finaldocha2.dao.FdochaUserDao">
+
+    <select id="loginDao" parameterType="com.lastdocha2.finaldocha2.dao.FdochaUserDao" resultType="org.springframework.security.core.userdetails.UserDetails">
+        select id, user_id as userId ,user_pw as userPw,user_name as userName ,create_date as createDate,update_date as updateDate from fd_user
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test="userId != null and userId != '' " >
+                user_id = #{userId}
+            </if>
+            <if test="userPw != null and userPw != '' " >
+            AND user_pw = #{userPw}
+            </if>
+        </trim>
+	</select>
+
+    <select id="loginDao2" parameterType="com.lastdocha2.finaldocha2.dao.FdochaUserDao" resultType="com.lastdocha2.finaldocha2.dto.UserDTO">
+        select id, user_id as userId ,user_pw as userPw, user_name as userName ,create_date as createDate,update_date as updateDate from fd_user
+        <trim prefix="WHERE" prefixOverrides="AND|OR">
+            <if test="userId != null and userId != '' " >
+                user_id = #{userId}
+            </if>
+            <if test="userPw != null and userPw != '' " >
+                AND user_pw = #{userPw}
+            </if>
+        </trim>
+    </select>
+
+</mapper>

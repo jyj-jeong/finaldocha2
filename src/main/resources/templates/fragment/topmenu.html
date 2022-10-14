@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <header xmlns:th="http://www.thymeleaf.org" th:fragment="topMenu">
+        <div class="topBar">
+            <div>
+                   <img onclick="mainlogo()" src="../static/img/header-logo.png" alt=""/>
+
+                <h1 th:text="${userInfo.userName + '님 반갑습니다.'}"></h1>
+            </div>
+            <h1 onclick="fn_logout()">Log-out</h1>
+        </div>
+        <div class="menu">
+            <ul>
+                <!--            <li style="background-color:#3d4e84;-->
+                <!--            color:white;">계약리스트</li>-->
+                <li onclick="contractList();" >계약리스트</li>
+<!--                <li>탁송기사</li>-->
+<!--                <li>차량관리</li>-->
+<!--                <li>요금관리</li>-->
+            </ul>
+        </div>
+    <script>
+        function fn_logout() {
+                  $.ajax({
+                    type : "POST",
+                    url : "/logoutgo",
+                    dataType : "json",
+                    error : function(){
+                        alert('????');
+                        window.location ="/login";
+                    },
+                    success : function(data){
+                      alert("통신데이터 값 : " + JSON.stringify(data));
+                        alert('!!!');
+                    }
+            })
+        }
+    </script>
+    </header>

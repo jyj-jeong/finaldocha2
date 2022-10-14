@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragment/header :: mainHead"></head>
+<body>
+  <div id="root">
+    <header th:replace="fragment/topmenu :: topMenu">
+    </header>
+    <main>
+      <div class="contractList">
+        <div class="search">
+          <h1>계약 리스트</h1>
+          <h3 th:value="${userInfo}"></h3>
+          <h3 th:value="${userInfo.userName}"></h3>
+          <h3 th:value="${userInfo.getUserName()}"></h3>
+          <div>
+            <img src="../../../../static/img/search-icon.svg" alt="">
+            <input type="text" placeholder="Search">
+          </div>
+        </div>
+        <div class="table">
+          <table>
+            <colgroup>
+              <col>
+              <col>
+              <col>
+              <col class="none">
+              <col class="none">
+              <col>
+              <col class="none">
+              <col class="none">
+              <col class="none">
+              <col>
+            </colgroup>
+            <thead>
+              <tr>
+                  <th class="none-mobile">No.</th>
+                  <th>차량번호</th>
+                  <th class="none-fold">차종</th>
+                  <th class="none">
+                    <div class="flex">
+                      <div>대여일시</div>
+                      <div class="column">
+                        <img src="../../../../static/img/up_icon.svg" alt="">
+                        <img src="../../../../static/img/down_icon.svg" alt="">
+                      </div>
+                    </div>
+                  </th>
+                  <th class="none">
+                    <div class="flex">
+                      <div>반납일시</div>
+                      <div class="column">
+                        <img src="../../../../static/img/up_icon.svg" alt="">
+                        <img src="../../../../static/img/down_icon.svg" alt="">
+                      </div>
+                    </div>
+                  </th>
+                  <th>고객</th>
+                  <th class="none">담당자</th>
+                  <th class="none">탁송위치</th>
+                  <th class="none">탁송자</th>
+                  <th>
+                    <div class="flex" style="justify-content:center">
+                      <div>상태</div>
+                      <div class="column">
+                        <img src="../../../../static/img/up_icon.svg" alt="">
+                        <img src="../../../../static/img/down_icon.svg" alt="">
+                      </div>
+                    </div>
+                  </th>
+              </tr>
+              </thead>
+            <tbody>
+                <tr>
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="rent">대여중</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="reservation">예약</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="rent">대여중</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="reservation">예약</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="rent">대여중</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="reservation">예약</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+                <tr >
+                  <td class="none-mobile">22090001</td>
+                  <td>12호1234</td>
+                  <td class="none-fold">LF 쏘나타</td>
+                  <td class="none">2022-08-30 16:40</td>
+                  <td class="none">2022-09-12 18:00</td>
+                  <td>김고객</br>(010-1234-1234)</td>
+                  <td class="none">김담당</br>(010-1234-1234)</td>
+                  <td class="none">부산광역시 강서구 녹산산단382로14번가길 1285</td>
+                  <td class="none">김탁송</br>(010-1234-1234)</td>
+                  <td class="textRight"><button class="return">반납완료</button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+          <div class="pagination">
+            <button>Previous</button>
+            <div>1</div>
+            <div class="selectPage">2</div>
+            <div>3</div>
+            <button>Next</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <img src="../../../../static/img/header-logo.png" alt="">
+        <p>당신의 두번째 차</p>
+      </div>
+      <div class="information">
+        <div>
+          <p>주식회사 모빌리티케이</p>
+          <p>주소 : 서울특별시 강서구 강서로52길 50, 3층 (내발산동, 대성빌딩)</p>
+          <p>사업자번호 : 605-88-01476</p>
+          <p>대표이사 : 신윤호</p>
+        </div>
+        <div>
+          <p>대표전화 : 1661-2666</p>
+          <p>Fax : 02-868-3313</p>
+        </div>
+        <div>
+          <p>Copyeight Mobility-K Inc. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+<script th:inline="javascript">
+
+  /*<![CDATA[*/ let name = /*[[ ${userInfo} ]]*/; /*]]*/
+  $(document).ready(function(){
+    //
+    // alert(name);
+    // alert(JSON.stringify(name));
+    // alert(name.userName);
+  })
+</script>
+</html>
+
+<script>
+
+  $(".table").click(function (){
+    window.location ="/cardetail"
+  })
+
+</script>

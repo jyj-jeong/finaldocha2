@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-<head th:replace="/fragment/header.html :: mainHead"></head>
+<head th:replace="fragment/header :: mainHead"></head>
 <body>
   <div id="root">
     <div class="mainImg">
@@ -9,23 +9,69 @@
         <img src="../static/img/login-logo.png" alt="">
         <div>
           <p>ID</p>
-          <input type="text">
+          <input id="userId" type="text">
           <p>PW</p>
-          <input type="text">
+          <input id="userPw" type="password">
 <!--          <button id="jqtest">test</button>-->
-          <button onclick="goPage()">Log-in</button>
+          <button id="login" onclick="fn_loginSubmit()">Log-in</button>
+          <div th:value="${notLogin}"></div>
         </div>
       </div>
     </div>
-  </div>
-<script>
-  function  goPage(){
-    window.location ="/home";
-  }
 
-  $("#jqtest").click(function() {
-    alert('click');
+    <form id="LoginPageForm" method="post">
+      <input type="hidden" id="username" name="username" value=""/>
+      <input type="hidden" id="password" name="password" value=""/>
+    </form>
+  </div>
+<script th:inline="javascript">
+  // function  goPage(){
+  //   window.location ="/home";
+  // }
+
+  // $("#jqtest").click(function() {
+  //   alert('click');
+  // });
+
+
+  $(document).ready(function(){
+    $("#login").click(function() {
+
+      var userId = $("#userId").val();
+      var userPw = $("#userPw").val();
+
+      console.log(userId + " userId")
+
+      console.log(userPw + "   userPw")
+
+      $.ajax({
+        type : "POST",
+        url : "/api/v1/app/dologin",
+        dataType : "json",
+        data: {"userId":userId, "userPw":userPw},
+        error : function(){
+          alert('아이디 혹은 비밀번호가 틀립니다.');
+        },
+        success : function(data){
+          // alert("통신데이터 값 : " + data);
+          window.location ="/home";
+        }
+
+      });
+    });
+
   });
+  // function fn_loginSubmit() {
+  //
+  //   $('#LoginPageForm').attr('action', '/user/loginprocess');	 //pc
+  //
+  //   $("#username").val($("#userId").val());
+  //   $("#password").val($("#userPassword").val());
+  //
+  //   $("#LoginPageForm").submit();
+  //
+  // }
+
 
 </script>
 </body>

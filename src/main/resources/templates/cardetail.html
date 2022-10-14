@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragment/header :: mainHead"></head>
+<body>
+  <div id="root">
+      <header th:replace="fragment/topmenu :: topMenu">
+      </header>
+    <main id="main">
+      <div class="contractDetail">
+        <div class="serialNumber box">
+          <h1>No. 22060001</h1>
+          <div>
+            <p>담당 직원</p>
+            <input class="textarea grayBox" type="text">
+          </div>
+        </div>
+        <div class="memo box">
+          <div class="viewMemo">
+            <h1>계약서 메모</h1>
+            <div class="memoScroll">
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 메모메모메모
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 메모메모메모
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 메모메모메모
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 메모메모메모
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="typeMemo">
+            <div>
+              <p>메모</p>
+              <span>(0/120자)</span>
+            </div>
+            <input class="typeMemoArea grayBox" 
+                      placeholder="메모를 입력해주세요.">
+            <div>
+                <button class="memoBtn">
+                  입력
+                </button>
+            </div>
+          </div>
+        </div>
+        <div class="detailInfo">
+          <div class="info1 box">
+            <h1>고객정보(운전자)</h1>
+            <div>
+              <p>고객명</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>고객 연락처</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>주소</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>주소상세</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>면허번호</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>운전면허증 업로드</p>
+              <button class="license">업로드</button>
+              <!-- <img src="../static/img/driver_license.svg" alt=""> -->
+            </div>
+          </div>
+          <div class="info1 box">
+            <h1>고객정보(제2운전자)</h1>
+            <div>
+              <p>고객명</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>고객 연락처</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>주소</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>주소상세</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>면허번호</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>운전면허증 업로드</p>
+              <button class="license">업로드</button>
+              <!-- <img src="../static/img/driver_license.svg" alt=""> -->
+            </div>
+          </div>
+          <div class="info1 box">
+            <h1>차량정보</h1>
+            <div>
+              <p>차량번호</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>차종</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>유종</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>주행거리</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>옵션</p>
+              <input type="text" class="grayBox big">
+            </div>
+          </div>
+          <div class="info2 box">
+            <h1>대여정보</h1>
+            <div class="separate">
+              <div>
+                <p>대여일</p>
+                <input class="grayBox" type="text">
+                <img src="../static/img/calendar_icon.svg" alt="">
+              </div>
+              <div>
+                <p>대여시간</p>
+                <div class="grayBox">4:14 PM</div>
+                <img src="../static/img/clock_white_icon.svg" alt="">
+              </div>
+            </div>
+            <div class="separate">
+              <div>
+                <p>반납일</p>
+                <input class="grayBox" type="text">
+                <img src="../static/img/calendar_icon.svg" alt="">
+              </div>
+              <div>
+                <p>반납시간</p>
+                <div class="grayBox">4:14 PM</div>
+                <img src="../static/img/clock_black_icon.svg" alt="">
+              </div>
+            </div>
+            <div>
+              <div class="checkboxFlex">
+                <p>대여위치</p>
+                <div>
+                  <input type="checkbox">내방
+                </div>
+              </div>
+              <input type="text" class="grayBox medium">
+            </div>
+            <div>
+              <div class="checkboxFlex">
+                <p>반납위치</p>
+                <div>
+                  <input type="checkbox">내방
+                  <input type="checkbox">대여위치와 동일
+                </div>
+              </div>
+              <input type="text" class="grayBox medium">
+            </div>
+            <div>
+              <p>대여금액</p>
+              <input class="grayBox" type="text">
+            </div>
+          </div>
+          <div class="info3 box">
+            <h1>탁송기사</h1>
+            <div>
+              <p>기사명</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>기사 연락차</p>
+              <input class="grayBox" type="text">
+            </div>
+            <div>
+              <p>회사명</p>
+              <input class="grayBox" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="deposit box">
+          <div class="viewMemo">
+            <h1>입금 내역</h1>
+            <div class="memoScroll">
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원 / 메모메모메모
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원
+                </div>
+              </div>
+              <div class="memoList">
+                <div class="memoLine">
+                  22.09.14 19:40
+                </div>
+                <div class="memoLine">
+                  홍길동 > 22.09.14 대여료 현금 500,000원
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="typeMemo">
+            <div class="flex">
+              <div>
+                <div class="column">
+                  <p>입금일</p>
+                  <input class="grayBox" type="text">
+                  <img src="../static/img/calendar_icon.svg" alt="">
+                </div>
+                <div class="column">
+                  <p>구분</p>
+                  <div>
+                    <div class="grayBox">대여료</div>
+                    <div class="grayBox">
+                      <img src="../static/img/down_icon.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex">
+              <div class="column">
+                <p>입금액</p>
+                <input class="grayBox" type="text">
+              </div>
+                <div class="circle flex">
+                  <img src="../static/img/circle_icon.svg" alt="">현금
+                  <img src="../static/img/circle_icon.svg" alt="">카드
+                  <img src="../static/img/circle_icon.svg" alt="">기타
+                </div>
+            </div>
+            <div class="separate">
+              <p>입금내역 메모</p>
+              <span>(0/120자)</span>
+            </div>
+            <input class="typeMemoArea grayBox">
+            <div>
+                <button class="memoBtn">
+                  입력
+                </button>
+            </div>
+          </div>
+        </div>
+        <div class="buttonArea">
+          <button>차량 데미지 체크</button>
+          <button>사진 등록</button>
+        </div>
+        <div class="photo">
+          <div class="box">
+            <h1>차량사진</h1>
+            <div class="photoList">
+              <div class="photo1">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo1').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo2">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo2').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo3">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo3').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo4">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo4').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo5">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo5').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo6">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo6').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo7">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo7').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo8">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo8').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo9">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo9').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo10">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo10').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div class="photo11">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo11').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div  class="photo12">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo12').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div  class="photo13">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo13').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+              <div  class="photo14">
+                <img src="../static/img/photo_icon.svg" alt="">
+                <img onclick="document.querySelector('.photo14').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="buttonAreaTwo column">
+            <button>저장</button>
+            <button>계약서 전송</button>
+            <button>미서명 계약서 다운</button>
+            <button>완료 계약서 다운</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <img src="../static/img/header-logo.png" alt="">
+        <p>당신의 두번째 차</p>
+      </div>
+      <div class="information">
+        <div>
+          <p>주식회사 모빌리티케이</p>
+          <p>주소 : 서울특별시 강서구 강서로52길 50, 3층 (내발산동, 대성빌딩)</p>
+          <p>사업자번호 : 605-88-01476</p>
+          <p>대표이사 : 신윤호</p>
+        </div>
+        <div>
+          <p>대표전화 : 1661-2666</p>
+          <p>Fax : 02-868-3313</p>
+        </div>
+        <div>
+          <p>Copyright Mobility-K Inc. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
