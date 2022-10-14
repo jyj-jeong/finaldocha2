@@ -116,4 +116,11 @@ public class FdochaController {
 
         return "login";
     }
+
+    @RequestMapping(value = "/damagecheck")
+    public String carDamage(@RequestParam Map<String, Object> reqParam) {
+
+
+        return "carDamage";
+    }
 }

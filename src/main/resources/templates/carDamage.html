@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragment/header :: mainHead"></head>
+<body>
+  <div id="root">
+    <div class="carDamage">
+      <div class="checkWin">
+        <h1>차량 데미지 체크</h1>
+        <div class="checkList">
+          <div class="list1">
+            <button class="carDamageBtn" data-btn="1">긁힘</button>
+          </div>
+          <div class="list2">
+            <button class="carDamageBtn" data-btn="2">긁힘</button>
+          </div>
+          <div class="list3">
+            <button class="carDamageBtn" data-btn="3">긁힘</button>
+          </div>
+          <div class="list4">
+            <button class="carDamageBtn" data-btn="4">긁힘</button>
+          </div>
+          <div class="list5">
+            <button class="carDamageBtn" data-btn="5">긁힘</button>
+          </div>
+          <div class="list6">
+            <button class="carDamageBtn" data-btn="6">긁힘</button>
+          </div>
+        </div>
+        <div class="carPhoto">
+          <img src="../static/img/carRightView.png" alt="">
+          <img src="../static/img/carTopView.png" alt="">
+          <img src="../static/img/carLeftView.png" alt="">
+          <div class="carPart">
+            <img src="../static/img/scratch_part.svg" alt="">
+            <img src="../static/img/scratch_part.svg" alt="">
+            <img src="../static/img/scratch_part.svg" alt="">
+            <img src="../static/img/dent_part.svg" alt="">
+            <img src="../static/img/dent_part.svg" alt="">
+            <img src="../static/img/ripped_part.svg" alt="">
+            <img src="../static/img/ripped_part.svg" alt="">
+            <img src="../static/img/crooked_part.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const checkList = document.getElementsByClassName('checkList')[0];
+    const color = ['#b4c7e7', '#f8cbad', '#ffe699', '#c5e0b4', '#2f5597', '#ff0000'];
+      checkList.addEventListener('click',function(e) {
+        let getDataset = e.target.dataset.btn;
+        for(let i=0; i<checkList.children.length; i++) {
+          if(checkList.children[i].children[0].dataset.btn == getDataset) {
+            checkList.children[i].setAttribute('style',`border:1px solid ${color[i]}`);
+            console.log('hi');
+          } else {
+          checkList.children[i].setAttribute('style','border:1px solid #ffffff');
+          }
+        } 
+      })
+  </script>
+</body>
+</html>

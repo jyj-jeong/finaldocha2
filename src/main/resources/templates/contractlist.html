@@ -263,27 +263,8 @@
         </div>
       </div>
     </main>
-    <footer>
-      <div>
-        <img src="../../../../static/img/header-logo.png" alt="">
-        <p>당신의 두번째 차</p>
-      </div>
-      <div class="information">
-        <div>
-          <p>주식회사 모빌리티케이</p>
-          <p>주소 : 서울특별시 강서구 강서로52길 50, 3층 (내발산동, 대성빌딩)</p>
-          <p>사업자번호 : 605-88-01476</p>
-          <p>대표이사 : 신윤호</p>
-        </div>
-        <div>
-          <p>대표전화 : 1661-2666</p>
-          <p>Fax : 02-868-3313</p>
-        </div>
-        <div>
-          <p>Copyeight Mobility-K Inc. All Rights Reserved.</p>
-        </div>
-      </div>
-    </footer>
+  <footer th:replace="fragment/footer" :: mainFooter>
+  </footer>
   </div>
 </body>
 <script th:inline="javascript">
