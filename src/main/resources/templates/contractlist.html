@@ -17,6 +17,8 @@
             <input type="text" placeholder="Search">
           </div>
         </div>
+        <div class="table"><div class="textRight"><button class="rent" onclick="goRegist()">등록하기</button></div></div>
+        <br><br>
         <div class="table">
           <table>
             <colgroup>
@@ -69,7 +71,7 @@
                   </th>
               </tr>
               </thead>
-            <tbody>
+            <tbody class="detailClick">
                 <tr>
                   <td class="none-mobile">22090001</td>
                   <td>12호1234</td>
@@ -281,8 +283,12 @@
 
 <script>
 
-  $(".table").click(function (){
+  $(".detailClick").click(function (){
     window.location ="/cardetail"
   })
+
+  function goRegist(){
+    window.location ="/car_regist"
+  }
 
 </script>

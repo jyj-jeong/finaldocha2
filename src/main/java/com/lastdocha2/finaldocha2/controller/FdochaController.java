@@ -123,4 +123,17 @@ public class FdochaController {
 
         return "carDamage";
     }
+
+    @RequestMapping(value = "/car_regist")
+    public ModelAndView carRegist(Model model , HttpServletRequest request ,ModelAndView mv) {
+        mv = loginCheckservice.loginCheckservice(request,mv);
+
+        if(mv.getModel().get("notLogin") != null){
+            return mv;
+        }
+        else{
+            mv.setViewName("carRegist");
+            return mv;
+        }
+    }
 }

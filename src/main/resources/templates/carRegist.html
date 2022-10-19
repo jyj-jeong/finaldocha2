@@ -72,23 +72,23 @@
             <h1>고객정보(운전자)</h1>
             <div>
               <p>고객명</p>
-              <input class="grayBox" type="text">
+              <input id="clientName1" class="grayBox" type="text"/>
             </div>
             <div>
               <p>고객 연락처</p>
-              <input class="grayBox" type="text">
+              <input id="clientPhoneNum1" class="grayBox" type="text"/>
             </div>
             <div>
               <p>주소</p>
-              <input class="grayBox" type="text">
+              <input class="grayBox" type="text"/>
             </div>
             <div>
               <p>주소상세</p>
-              <input class="grayBox" type="text">
+              <input class="grayBox" type="text"/>
             </div>
             <div>
               <p>면허번호</p>
-              <input class="grayBox" type="text">
+              <input class="grayBox" type="text"/>
             </div>
             <div>
               <p>운전면허증 업로드</p>
@@ -100,11 +100,11 @@
             <h1>고객정보(제2운전자)</h1>
             <div>
               <p>고객명</p>
-              <input class="grayBox" type="text">
+              <input id="clientName2" class="grayBox" type="text">
             </div>
             <div>
               <p>고객 연락처</p>
-              <input class="grayBox" type="text">
+              <input id="clientPhoneNum2" class="grayBox" type="text">
             </div>
             <div>
               <p>주소</p>
@@ -323,41 +323,6 @@
           <div class="box">
             <h1>차량사진</h1>
             <div class="photoList">
-              <div class="photo1">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo1').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-                1
-              </div>
-              <div class="photo2">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo2').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-                2
-              </div>
-              <div class="photo3">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo3').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-                3
-              </div>
-              <div class="photo4">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo4').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-                4
-              </div>
-              <div class="photo5">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo5').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-                5
-              </div>
-              <div class="photo6">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo6').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-                6
-              </div>
-              <div class="photo7">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo7').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-                7
-              </div>
               <div class="photo8">
                 <img src="../static/img/photo_icon.svg" alt="">
                 <img onclick="document.querySelector('.photo8').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
@@ -429,6 +394,14 @@
 
   function openPop(){
     var popup = window.open('/damagecheck', '데미지체크', 'width=900px,height=800px,scrollbars=yes');
+  }
+
+  function constractSave(){
+    let clientName1 = $("#clientName1").val(); //제1 고객명
+    let clientPhoneNum1 = $("#clientPhoneNum1").val(); //제1 고객 연락처
+    let clientName2 = $("#clientName2").val(); //제2 고객명
+    let clientPhoneNum2 = $("#clientPhoneNum2").val(); //제2 고객 연락처
+
   }
 
 </script>

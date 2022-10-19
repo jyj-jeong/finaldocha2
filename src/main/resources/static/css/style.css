@@ -226,6 +226,14 @@ main .contractList .table .rent {
   border:0;
 }
 
+ .rent {
+  background-color: #3d4e84;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: center;
+  border:0;
+}
+
 main .contractList .table .reservation {
   background-color:  #f59a23;
   box-sizing: border-box;
