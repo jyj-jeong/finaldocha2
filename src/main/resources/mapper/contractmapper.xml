@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lastdocha2.finaldocha2.dao.CarRgistDao">
+
+    <insert id="constractSave" parameterType="com.lastdocha2.finaldocha2.dao.CarRgistDao">
+        	    <![CDATA[
+        INSERT INTO constact_list(
+--                           제1 고객명
+                          client_name1
+--                               제1 고객 연락처
+                        , client_phone_num1
+--                               제1 고객 면허번호
+                        , client_lisense_num1
+--                               제2 고객명
+                        , client_name2
+--                               제2 고객 연락처
+                        , client_phone_num2
+--                               제2 고객 면허번호
+                        , client_lisense_num2
+
+                        , create_date
+                        , update_date
+
+        )VALUES (
+                #{clientName1}
+                , #{clientPhoneNum1}
+                , #{clientLisenseNum1}
+                , #{clientName2}
+                , #{clientPhoneNum2}
+                , #{clientLisenseNum2}
+                , now()
+                , now()
+                )
+        ]]>
+    </insert>
+
+</mapper>

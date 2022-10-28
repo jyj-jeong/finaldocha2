@@ -18,38 +18,14 @@
           <div class="viewMemo">
             <h1>계약서 메모</h1>
             <div class="memoScroll">
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 메모메모메모
-                </div>
-              </div>
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 메모메모메모
-                </div>
-              </div>
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 메모메모메모
-                </div>
-              </div>
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 메모메모메모
-                </div>
-              </div>
+<!--              <div class="memoList">-->
+<!--                <div class="memoLine">-->
+<!--                  22.09.14 19:40-->
+<!--                </div>-->
+<!--                <div class="memoLine">-->
+<!--                  홍길동 > 메모메모메모-->
+<!--                </div>-->
+<!--              </div>-->
             </div>
           </div>
           <div class="typeMemo">
@@ -88,7 +64,7 @@
             </div>
             <div>
               <p>면허번호</p>
-              <input class="grayBox" type="text"/>
+              <input id="clientLisenseNum1" class="grayBox" type="text"/>
             </div>
             <div>
               <p>운전면허증 업로드</p>
@@ -116,7 +92,7 @@
             </div>
             <div>
               <p>면허번호</p>
-              <input class="grayBox" type="text">
+              <input id="clientLisenseNum2" class="grayBox" type="text">
             </div>
             <div>
               <p>운전면허증 업로드</p>
@@ -354,7 +330,7 @@
             </div>
           </div>
           <div class="buttonAreaTwo column">
-            <button>저장</button>
+            <button onclick="constractSave()">저장</button>
             <button>계약서 전송</button>
             <button>미서명 계약서 다운</button>
             <button>완료 계약서 다운</button>
@@ -399,9 +375,39 @@
   function constractSave(){
     let clientName1 = $("#clientName1").val(); //제1 고객명
     let clientPhoneNum1 = $("#clientPhoneNum1").val(); //제1 고객 연락처
+    let clientLisenseNum1 = $("#clientLisenseNum1").val(); //제1 고객 면허번호
     let clientName2 = $("#clientName2").val(); //제2 고객명
     let clientPhoneNum2 = $("#clientPhoneNum2").val(); //제2 고객 연락처
+    let clientLisenseNum2 = $("#clientLisenseNum2").val(); //제2 고객 면허번호
 
+
+    $.ajax({
+      type : "POST",
+      url : "/api/v1/app/car_regist",
+      dataType : "json",
+      data: {
+        "clientName1":clientName1,
+        "clientPhoneNum1":clientPhoneNum1,
+        "clientLisenseNum1":clientLisenseNum1,
+        // "afterTreatmentFee":afterTreatmentFee,
+        "clientName2":clientName2,
+        "clientPhoneNum2":clientPhoneNum2,
+        "clientLisenseNum2":clientLisenseNum2,
+      },
+      error : function(){
+        alert('저장에러.');
+      },
+      success : function(data){
+        // alert("통신데이터 값 : " + JSON.stringify(data));
+        //   alert("통신데이터 값 : " + data.bohumlossofbusiness);
+
+        // $("#bohumlossofbusiness").text((data.bohumlossofbusiness).toString().replace(moneycom,",")); // 보험사휴업손해액
+        // $("#bubumlossofbusiness").text((data.bubumlossofbusiness).toString().replace(moneycom,",")); // 법원휴업손해액
+        alert('저장 완료.');
+        console.log(data)
+      }
+
+    });
   }
 
 </script>
