@@ -9,25 +9,87 @@
                           client_name1
 --                               제1 고객 연락처
                         , client_phone_num1
+--                              제1 고객 주소
+                        , client_address1
+--                              제1 고객 주소 상세
+                        , client_address_detail1
 --                               제1 고객 면허번호
                         , client_lisense_num1
 --                               제2 고객명
                         , client_name2
 --                               제2 고객 연락처
                         , client_phone_num2
+--                              제2 고객 주소
+                         , client_address2
+--                              제2 고객 주소 상세
+                         , client_address_detail2
 --                               제2 고객 면허번호
                         , client_lisense_num2
 
-                        , create_date
+--                         차량번호
+                        ,car_number
+--                               차종
+                        ,car_class
+--                              유종
+                        ,oil_class
+--                               주행거리
+                        ,car_distance
+--                              옵션
+                        ,car_option
+
+--                              대여일
+                        ,rental_date
+--                               대여시간
+                        ,rental_time
+--                          반납일
+                        ,return_date
+--                            반납시간
+                        ,return_time
+--                              대여위치
+                        ,rental_location
+--                          반납위치
+                        ,return_location
+--                          기사명
+                         ,driver_name
+--                          기사 연락처
+                         ,driver_phone
+            --                          회사명
+                         ,company_name
+
+
+                         , create_date
                         , update_date
 
         )VALUES (
                 #{clientName1}
                 , #{clientPhoneNum1}
+                , #{clientAddress1}
+                , #{clientAddressDetail11}
                 , #{clientLisenseNum1}
+
                 , #{clientName2}
                 , #{clientPhoneNum2}
+                , #{clientAddress2}
+                , #{clientAddressDetail12}
                 , #{clientLisenseNum2}
+
+                , #{carNumber}
+                , #{carClass}
+                , #{oilClass}
+                , #{carDistance}
+                , #{carOption}
+
+                , #{rentalDate}
+                , #{rentalTime}
+                , #{returnDate}
+                , #{returnTime}
+                , #{rentalLocation}
+                , #{returnLocation}
+
+                , #{driverName}
+                , #{driverName}
+                , #{companyName}
+
                 , now()
                 , now()
                 )

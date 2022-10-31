@@ -8,7 +8,8 @@
     <main id="main">
       <div class="contractDetail">
         <div class="serialNumber box">
-          <h1>No. 22060001</h1>
+<!--          <h1>No. 22060001</h1> 등록화면 넘버 없음-->
+          <h1></h1>
           <div>
             <p>담당 직원</p>
             <input class="textarea grayBox" type="text">
@@ -37,7 +38,7 @@
                    placeholder="메모를 입력해주세요.">
             </textarea>
             <div>
-              <button class="memoBtn">
+              <button onclick="brforeAlret()" class="memoBtn">
                 입력
               </button>
             </div>
@@ -56,11 +57,11 @@
             </div>
             <div>
               <p>주소</p>
-              <input class="grayBox" type="text"/>
+              <input id="client_address1" class="grayBox" type="text"/>
             </div>
             <div>
               <p>주소상세</p>
-              <input class="grayBox" type="text"/>
+              <input id="client_address_detail1" class="grayBox" type="text"/>
             </div>
             <div>
               <p>면허번호</p>
@@ -84,11 +85,11 @@
             </div>
             <div>
               <p>주소</p>
-              <input class="grayBox" type="text">
+              <input id="client_address2" class="grayBox" type="text">
             </div>
             <div>
               <p>주소상세</p>
-              <input class="grayBox" type="text">
+              <input id="client_address_detail2" class="grayBox" type="text">
             </div>
             <div>
               <p>면허번호</p>
@@ -104,23 +105,23 @@
             <h1>차량정보</h1>
             <div>
               <p>차량번호</p>
-              <input class="grayBox" type="text">
+              <input id="car_number" class="grayBox" type="text">
             </div>
             <div>
               <p>차종</p>
-              <input class="grayBox" type="text">
+              <input id="car_class" class="grayBox" type="text">
             </div>
             <div>
               <p>유종</p>
-              <input class="grayBox" type="text">
+              <input id="oil_class" class="grayBox" type="text">
             </div>
             <div>
               <p>주행거리</p>
-              <input class="grayBox" type="text">
+              <input id="car_distance" class="grayBox" type="text">
             </div>
             <div>
               <p>옵션</p>
-              <input type="text" class="grayBox big">
+              <input id="car_option" type="text" class="grayBox big">
             </div>
           </div>
           <div class="info2 box">
@@ -128,21 +129,21 @@
             <div class="separate">
               <div>
                 <p>대여일</p>
-                <input type="date" class="grayBox">
+                <input id="rental_date" type="date" class="grayBox">
               </div>
               <div>
                 <p>대여시간</p>
-                <input type="time" class="grayBox">
+                <input id="rental_time" type="time" class="grayBox">
               </div>
             </div>
             <div class="separate">
               <div>
                 <p>반납일</p>
-                <input type="date" class="grayBox">
+                <input id="return_date" type="date" class="grayBox">
               </div>
               <div>
                 <p>반납시간</p>
-                <input type="time" class="grayBox">
+                <input id="return_time" type="time" class="grayBox">
               </div>
             </div>
             <div>
@@ -152,7 +153,7 @@
                   <input type="checkbox">내방
                 </div>
               </div>
-              <input type="text" class="grayBox medium">
+              <input id="rental_location" type="text" class="grayBox medium">
             </div>
             <div>
               <div class="checkboxFlex">
@@ -162,7 +163,7 @@
                   <input type="checkbox">대여위치와 동일
                 </div>
               </div>
-              <input type="text" class="grayBox medium">
+              <input id="return_location" type="text" class="grayBox medium">
             </div>
             <div>
               <p>대여금액</p>
@@ -173,15 +174,15 @@
             <h1>탁송기사</h1>
             <div>
               <p>기사명</p>
-              <input class="grayBox" type="text">
+              <input id="driver_name" class="grayBox" type="text">
             </div>
             <div>
-              <p>기사 연락차</p>
-              <input class="grayBox" type="text">
+              <p>기사 연락처</p>
+              <input id="driver_phone" class="grayBox" type="text">
             </div>
             <div>
               <p>회사명</p>
-              <input class="grayBox" type="text">
+              <input id="company_name" class="grayBox" type="text">
             </div>
           </div>
         </div>
@@ -189,47 +190,48 @@
           <div class="viewMemo memo2">
             <h1>입금 내역</h1>
             <div class="memoScroll scroll2">
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 22.09.14 대여료 현금 500,000원
-                </div>
-              </div>
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 22.09.14 대여료 현금 500,000원 / 메모메모메모
-                </div>
-              </div>
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 22.09.14 대여료 현금 500,000원
-                </div>
-              </div>
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 22.09.14 대여료 현금 500,000원
-                </div>
-              </div>
-              <div class="memoList">
-                <div class="memoLine">
-                  22.09.14 19:40
-                </div>
-                <div class="memoLine">
-                  홍길동 > 22.09.14 대여료 현금 500,000원
-                </div>
-              </div>
-            </div>
+<!--              이거 지웠다고 디자인이 꺠지면 어떻게 하나..-->
+<!--              <div class="memoList">-->
+<!--                <div class="memoLine">-->
+<!--                  22.09.14 19:40-->
+<!--                </div>-->
+<!--                <div class="memoLine">-->
+<!--                  홍길동 > 22.09.14 대여료 현금 500,000원-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="memoList">-->
+<!--                <div class="memoLine">-->
+<!--                  22.09.14 19:40-->
+<!--                </div>-->
+<!--                <div class="memoLine">-->
+<!--                  홍길동 > 22.09.14 대여료 현금 500,000원 / 메모메모메모-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="memoList">-->
+<!--                <div class="memoLine">-->
+<!--                  22.09.14 19:40-->
+<!--                </div>-->
+<!--                <div class="memoLine">-->
+<!--                  홍길동 > 22.09.14 대여료 현금 500,000원-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="memoList">-->
+<!--                <div class="memoLine">-->
+<!--                  22.09.14 19:40-->
+<!--                </div>-->
+<!--                <div class="memoLine">-->
+<!--                  홍길동 > 22.09.14 대여료 현금 500,000원-->
+<!--                </div>-->
+<!--              </div>-->
+<!--              <div class="memoList">-->
+<!--                <div class="memoLine">-->
+<!--                  22.09.14 19:40-->
+<!--                </div>-->
+<!--                <div class="memoLine">-->
+<!--                  홍길동 > 22.09.14 대여료 현금 500,000원-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
           </div>
           <div class="typeMemo">
             <div class="flex">
@@ -285,55 +287,55 @@
             </div>
             <input class="typeMemoArea grayBox">
             <div>
-              <button class="memoBtn">
+              <button class="memoBtn" onclick="brforeAlret()">
                 입력
               </button>
             </div>
           </div>
         </div>
         <div class="buttonArea">
-          <button onclick="openPop();">차량 데미지 체크</button>
-          <button>사진 등록</button>
+          <button onclick="brforeAlret();">차량 데미지 체크</button>
+          <button onclick="brforeAlret();">사진 등록</button>
         </div>
         <div class="photo">
           <div class="box">
             <h1>차량사진</h1>
             <div class="photoList">
-              <div class="photo8">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo8').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-              </div>
-              <div class="photo9">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo9').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-              </div>
-              <div class="photo10">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo10').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-              </div>
-              <div class="photo11">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo11').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-              </div>
-              <div  class="photo12">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo12').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-              </div>
-              <div  class="photo13">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo13').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-              </div>
-              <div  class="photo14">
-                <img src="../static/img/photo_icon.svg" alt="">
-                <img onclick="document.querySelector('.photo14').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">
-              </div>
+<!--              <div class="photo8">-->
+<!--                <img src="../static/img/photo_icon.svg" alt="">-->
+<!--                <img onclick="document.querySelector('.photo8').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">-->
+<!--              </div>-->
+<!--              <div class="photo9">-->
+<!--                <img src="../static/img/photo_icon.svg" alt="">-->
+<!--                <img onclick="document.querySelector('.photo9').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">-->
+<!--              </div>-->
+<!--              <div class="photo10">-->
+<!--                <img src="../static/img/photo_icon.svg" alt="">-->
+<!--                <img onclick="document.querySelector('.photo10').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">-->
+<!--              </div>-->
+<!--              <div class="photo11">-->
+<!--                <img src="../static/img/photo_icon.svg" alt="">-->
+<!--                <img onclick="document.querySelector('.photo11').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">-->
+<!--              </div>-->
+<!--              <div  class="photo12">-->
+<!--                <img src="../static/img/photo_icon.svg" alt="">-->
+<!--                <img onclick="document.querySelector('.photo12').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">-->
+<!--              </div>-->
+<!--              <div  class="photo13">-->
+<!--                <img src="../static/img/photo_icon.svg" alt="">-->
+<!--                <img onclick="document.querySelector('.photo13').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">-->
+<!--              </div>-->
+<!--              <div  class="photo14">-->
+<!--                <img src="../static/img/photo_icon.svg" alt="">-->
+<!--                <img onclick="document.querySelector('.photo14').setAttribute('style','display:none;')" src="../static/img/x_icon.svg" alt="">-->
+<!--              </div>-->
             </div>
           </div>
           <div class="buttonAreaTwo column">
             <button onclick="constractSave()">저장</button>
-            <button>계약서 전송</button>
-            <button>미서명 계약서 다운</button>
-            <button>완료 계약서 다운</button>
+            <button onclick="brforeAlret();">계약서 전송</button>
+            <button onclick="brforeAlret();">미서명 계약서 다운</button>
+            <button onclick="brforeAlret();">완료 계약서 다운</button>
           </div>
         </div>
       </div>
@@ -373,12 +375,35 @@
   }
 
   function constractSave(){
+    //고객정보(운전자)
     let clientName1 = $("#clientName1").val(); //제1 고객명
     let clientPhoneNum1 = $("#clientPhoneNum1").val(); //제1 고객 연락처
+    let clientAddress1 = $("#client_address1").val(); //제1 고객 주소
+    let clientAddressDetail11 = $("#client_address_detail1").val(); //제1 고객 주소 상세
     let clientLisenseNum1 = $("#clientLisenseNum1").val(); //제1 고객 면허번호
+    //고객정보(제 2운전자)
     let clientName2 = $("#clientName2").val(); //제2 고객명
     let clientPhoneNum2 = $("#clientPhoneNum2").val(); //제2 고객 연락처
+    let clientAddress2 = $("#client_address2").val(); //제2 고객 주소
+    let clientAddressDetail12 = $("#client_address_detail2").val(); //제2 고객 주소 상세
     let clientLisenseNum2 = $("#clientLisenseNum2").val(); //제2 고객 면허번호
+    //차량정보
+    let carNumber = $("#car_number").val(); //차량번호
+    let carClass = $("#car_class").val(); //차종
+    let oilClass = $("#oil_class").val(); //유종
+    let carDistance = $("#car_distance").val(); //주행거리
+    let carOption = $("#car_option").val(); //옵션
+    //대여정보
+    let rentalDate = $("#rental_date").val(); //대여일
+    let rentalTime = $("#rental_time").val(); //대여시간
+    let returnDate = $("#return_date").val(); //반납일
+    let returnTime = $("#return_time").val(); //반납시간
+    let rentalLocation = $("#rental_location").val(); //대여위치
+    let returnLocation = $("#return_location").val(); //반납위치
+    //탁송기사
+    let driverName = $("#driver_name").val(); //기사명
+    let driverPhone = $("#driver_phone").val(); //기사연락처
+    let companyName = $("#company_name").val(); //회사명
 
 
     $.ajax({
@@ -386,13 +411,35 @@
       url : "/api/v1/app/car_regist",
       dataType : "json",
       data: {
+        //고객정보(운전자)
         "clientName1":clientName1,
         "clientPhoneNum1":clientPhoneNum1,
+        "clientAddress1":clientAddress1,
+        "clientAddressDetail11":clientAddressDetail11,
         "clientLisenseNum1":clientLisenseNum1,
-        // "afterTreatmentFee":afterTreatmentFee,
+        //고객정보(제 2운전자),
         "clientName2":clientName2,
         "clientPhoneNum2":clientPhoneNum2,
+        "clientAddress2":clientAddress2,
+        "clientAddressDetail12":clientAddressDetail12,
         "clientLisenseNum2":clientLisenseNum2,
+        //차량정보
+        "carNumber":carNumber,
+        "carClass":carClass,
+        "oilClass":oilClass,
+        "carDistance":carDistance,
+        "carOption":carOption,
+        //대여정보
+        "rentalDate":rentalDate,
+        "rentalTime":rentalTime,
+        "returnDate":returnDate,
+        "returnTime":returnTime,
+        "rentalLocation":rentalLocation,
+        "returnLocation":returnLocation,
+        //탁송기사
+        "driverName":driverName,
+        "driverPhone":driverPhone,
+        "companyName":companyName,
       },
       error : function(){
         alert('저장에러.');
@@ -408,6 +455,9 @@
       }
 
     });
+  }
+  function brforeAlret(){
+    alert("기본정보를 먼저 등록해 주세요");
   }
 
 </script>
